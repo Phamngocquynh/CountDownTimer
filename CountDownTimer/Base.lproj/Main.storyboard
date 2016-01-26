@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CountDownTimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Count Down" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zd9-D3-SDJ">
+                                <rect key="frame" x="93" y="28" width="134.5" height="28"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="dmr-cy-pJy">
+                                <rect key="frame" x="0.0" y="71" width="320" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="474534651.261087">
+                                    <!--2016-01-15 07:10:51 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="datePickerSrolled:" destination="BYZ-38-t0r" eventType="valueChanged" id="Vck-FA-IBr"/>
+                                </connections>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RD6-Mk-XOx">
+                                <rect key="frame" x="10" y="363" width="300" height="30"/>
+                                <color key="backgroundColor" red="0.91921128080000003" green="0.86381090189999998" blue="0.93970352560000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="3Gm-0G-n9P"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="li8-xT-czb">
+                                <rect key="frame" x="10" y="315" width="300" height="33.5"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="Rvp-w6-Sek"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="li8-xT-czb" firstAttribute="top" secondItem="dmr-cy-pJy" secondAttribute="bottom" constant="28" id="BDN-IG-mqa"/>
+                            <constraint firstItem="dmr-cy-pJy" firstAttribute="top" secondItem="zd9-D3-SDJ" secondAttribute="bottom" constant="15" id="D8g-9h-Onv"/>
+                            <constraint firstItem="dmr-cy-pJy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="DZb-xh-Fab"/>
+                            <constraint firstAttribute="trailing" secondItem="li8-xT-czb" secondAttribute="trailing" constant="10" id="Huk-fP-DNV"/>
+                            <constraint firstAttribute="trailing" secondItem="RD6-Mk-XOx" secondAttribute="trailing" constant="10" id="SLv-dd-mUr"/>
+                            <constraint firstItem="RD6-Mk-XOx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="TOr-n3-dEd"/>
+                            <constraint firstItem="zd9-D3-SDJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Vmf-G8-Ngq"/>
+                            <constraint firstItem="RD6-Mk-XOx" firstAttribute="top" secondItem="li8-xT-czb" secondAttribute="bottom" constant="14.5" id="YID-7P-KPM"/>
+                            <constraint firstItem="li8-xT-czb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="47.75" id="fJl-pE-dze"/>
+                            <constraint firstItem="zd9-D3-SDJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iMe-I2-4qa"/>
+                            <constraint firstItem="li8-xT-czb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="o4j-yO-7mA"/>
+                            <constraint firstAttribute="trailing" secondItem="dmr-cy-pJy" secondAttribute="trailing" id="qdT-69-dKa"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="datePicker" destination="dmr-cy-pJy" id="njF-3v-0F9"/>
+                        <outlet property="timeLabel" destination="RD6-Mk-XOx" id="84e-hz-8Dr"/>
+                        <outlet property="yearMonthDayLabel" destination="li8-xT-czb" id="U1g-al-4rG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
